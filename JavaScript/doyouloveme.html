@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>Do you love me?</title>
+</head>
+<style>
+    div {
+        margin-left: 250px;
+        margin-top: 250px;
+        position: absolute;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>Do you love me?</h1>
+        <button type="button" onclick="yes()" id="yes">Yes</button>
+        <button type="button" onmouseover="mouseover()" id="No" style="position: absolute;">No</button>
+    </div>
+    <script>
+        function yes() {
+            alert("<3")
+        }
+        function mouseover(){
+        let w = window.innerWidth * Math.random();
+        let h = window.innerHeight * Math.random();
+        
+
+        document.getElementById("No").style.left = w + "px";
+        document.getElementById("No").style.top = h + "px";
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

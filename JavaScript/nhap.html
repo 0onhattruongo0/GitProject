@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Nháp</title>
+  </head>
+  <body>
+    <p onmouseout="mouseout()" onmouseover="mouseover()" id="nhap">
+      Đây là nháp
+    </p>
+    <script>
+      function mouseover() {
+        document.getElementById("nhap").style.color = "red";
+      }
+      function mouseout() {
+        document.getElementById("nhap").style.color = "green";
+      }
+    </script>
+
+    <p id="nhap2">Đây là nháp 2</p>
+    <script>
+      var nhap2 = document.getElementById("nhap2");
+      nhap2.addEventListener("mouseover", mouseover1);
+      nhap2.addEventListener("mouseout", mouseout1);
+      function mouseover1() {
+        document.getElementById("nhap2").style.color = "red";
+      }
+      function mouseout1() {
+        document.getElementById("nhap2").style.color = "black";
+      }
+    </script>
+  </body>
+</html>

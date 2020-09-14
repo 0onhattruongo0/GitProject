@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>bài tập</title>
+  </head>
+  <body onload="init()">
+    <img src="./anh/Untitled.png" id="anh" /><br />
+
+    <button type="button" id="" onclick="clickMe()">click me</button>
+    <table>
+      <tr>
+        <td></td>
+        <td><button onclick="len()">&#8593;</button></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><button onclick="trai()">&#8592;</button></td>
+        <td><button onclick="xuong()">&#8595;</button></td>
+        <td><button onclick="phai()">&#8594;</button></td>
+      </tr>
+    </table>
+    <script>
+      var xe = document.getElementById("anh");
+      function init() {
+        xe.style.height = "100px";
+        xe.style.width = "250px";
+        xe.style.position = "relative";
+        xe.style.left = "0";
+        xe.style.top = "0";
+        window.addEventListener("keydown", dieukhienxe);
+      }
+
+      function clickMe() {
+        xe.style.left = parseInt(xe.style.left) + 10 + "px";
+      }
+      function len() {
+        xe.style.height = "250px";
+        xe.style.width = "100px";
+        xe.src = "./anh/len.png";
+
+        var xeheight = parseInt(xe.style.height);
+        if (parseInt(xe.style.top) > 0) {
+          xe.style.top = parseInt(xe.style.top) - 10 + "px";
+        } else {
+          xe.style.top = window.innerHeight - xeheight - 10;
+        }
+      }
+      function xuong() {
+        xe.style.top = parseInt(xe.style.top) + 10 + "px";
+        xe.style.height = "250px";
+        xe.style.width = "100px";
+        xe.src = "./anh/xuong.png";
+        var xeheight = parseInt(xe.style.height);
+        if (parseInt(xe.style.top) + xeheight + 10 < window.innerHeight) {
+          xe.style.top = parseInt(xe.style.top) + 10 + "px";
+        } else {
+          xe.style.top = "0px";
+        }
+      }
+      function trai() {
+        xe.style.height = "100px";
+        xe.style.width = "250px";
+        xe.src = "./anh/Untitled.png";
+        var xewidth = parseInt(xe.style.width);
+        if (parseInt(xe.style.left) > 0) {
+          xe.style.left = parseInt(xe.style.left) - 10 + "px";
+        } else {
+          xe.style.left = "0px";
+        }
+      }
+      function phai() {
+        xe.style.height = "100px";
+        xe.style.width = "250px";
+        xe.src = "./anh/phai.png";
+
+        var xewidth = parseInt(xe.style.width);
+        if (parseInt(xe.style.left) + xewidth + 10 < window.innerWidth) {
+          xe.style.left = parseInt(xe.style.left) + 10 + "px";
+        } else {
+          xe.style.left = window.innerWidth - 10 - xewidth;
+        }
+      }
+      function dieukhienxe(evt) {
+        switch (evt.keyCode) {
+          case 39: {
+            //right: 39
+            phai();
+            break;
+          }
+          case 37: {
+            //left: 37
+            trai();
+            break;
+          }
+          case 38: {
+            //up: 38
+            len();
+            break;
+          }
+          case 40: {
+            //down: 40
+            xuong();
+            break;
+          }
+          default: {
+            window.alert("please use these arrows button to controll.");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

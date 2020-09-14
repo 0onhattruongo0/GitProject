@@ -1,0 +1,11 @@
+let inputVatly;
+let inputHoahoc;
+let inputSinhhoc;
+inputVatly= prompt("Điểm Vật lý");
+inputHoahoc= prompt("Điểm Hóa Học");
+inputSinhhoc= prompt("Điểm Sinh Học");
+let Vatly= parseInt( inputVatly);
+let Hoahoc=parseInt(inputHoahoc);
+let Sinhhoc=parseInt(inputSinhhoc);
+let ĐiemTB=(Hoahoc+Sinhhoc+Vatly)/3;
+document.write( "DiemTB là:" + ĐiemTB);

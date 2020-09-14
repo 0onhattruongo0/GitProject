@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>Hiển thị đầu ra</title>
+</head>
+
+<body>
+    <button type="button" onclick="Showmessage()"> Click Me</button>
+    <script>
+        function Showmessage() {
+            alert("Xin Chào");
+        }
+    </script><br>
+    <div id="messageDiv"></div>
+    <button type="button" onclick="Showmessage1();"> Click Me</button>
+    <script>
+        function Showmessage1() {
+            document.getElementById("messageDiv").innerHTML = "Xin chào1";
+        }
+    </script><br>
+    <button type="button" onclick="Showmessage2()"> Click Me</button>
+    <script>
+        function Showmessage2() {
+            document.write("Xin Chào")
+        }
+    </script><br>
+    <button type="button" onclick="Showmessage3()"> Click Me</button>
+    <script>
+        function Showmessage3() {
+            console.log("Xin Chào")
+        }
+    </script>
+
+
+
+</body>
+
+</html>

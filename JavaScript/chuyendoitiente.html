@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            Đổi tiền tệ
+        </title>
+        
+    </head>
+    <body>
+        <form action="">
+           <h2> Amount</h2>
+           <input type="text" name="tien" id="tien" >;<h2>From Currency</h2>
+            <select id="tiengoc"> 
+                <option value="VNĐ" >Vietnam </option>;
+                <option value="USD">USD</option>;
+            </select><h2>To Currency</h2>
+            <select id="tiendoi"> 
+                <option value="USD">USD</option>;
+                <option value="VNĐ">Vietnam</option>;
+            </select> <br>
+            <button type="button" onclick="a()">chuyển đổi</button>;
+            
+        </form>
+        <div id="b"></div>
+        
+    </body>
+    <script>
+        function a(){
+    let tien= +document.getElementById("tien").value;
+    let tiengoc=document.getElementById("tiengoc").value;
+    let tiendoi=document.getElementById("tiendoi").value;
+    if(tiengoc=="VNĐ" && tiendoi=="USD"){
+       let c =tien/23000;
+        document.getElementById("b").innerHTML="tiendoidc la:"+c;
+    }
+    else{
+        let c =tien*23000;
+        document.getElementById("b").innerHTML="tiendoidc la:"+c;
+    }
+}
+
+    </script>
+</html>

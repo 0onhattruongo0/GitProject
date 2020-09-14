@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="a"></p>
+    <script>
+      /*let i;
+            let b = "";
+            for (i = 0; i <= 5; i++) {
+              b += "The Number " + i + "</br>";
+            }
+            document.getElementById("a").innerHTML = b;*/
+      /* let nhapso = +prompt("nhập số");
+            let n;
+            let total = 0;
+
+            for (n = 1; n <= nhapso; n++) {
+              total += n;
+            }
+            alert(total);*/
+
+      let sout;
+      sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+      for (i = 1; i <= 10; i++) {
+        sout = sout + "<tr>";
+        for (j = 1; j <= 10; j++) {
+          sout = sout + "<td>" + i * j + "</td>";
+        }
+        sout = sout + "</tr>";
+      }
+      sout = sout + "</table>";
+      document.write(sout);
+
+      /*let sout, i, j;
+      sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+      i = j = 1;
+      while (i <= 10) {
+        sout = sout + "<tr>";
+        while (j <= 10) {
+          sout = sout + "<td>" + i * j + "</td>";
+          j++;
+        }
+        sout = sout + "</tr>";
+        j = 1;
+        i++;
+      }
+      sout = sout + "</table>";
+      document.write(sout);*/
+      /*let nhapso1 = +prompt("nhập số1");
+      let tong = 0;
+      while (nhapso1 != -1) {
+        alert(nhapso1);
+        tong += nhapso1;
+        nhapso1 = +prompt("nhập số1");
+      }
+
+      document.write(tong);*/
+
+      /* let i = 1;
+
+      while (i < 100) {
+        //phân thân vòng lặp
+        document.write("<hr width = " + i + "%>");
+        i++;
+      }*/
+    </script>
+  </body>
+</html>

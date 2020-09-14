@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let number1 = 0;
+      let number2 = 1;
+      let c;
+      let n = 3;
+      let nhapso=prompt()
+
+      while (n <= 20) {
+        c = number1 + number2;
+        n += 1;
+
+        number1 = number2;
+        number2 = c;
+        document.write(c + "<br>");
+      }
+    </script>
+  </body>
+</html>

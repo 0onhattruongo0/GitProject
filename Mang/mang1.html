@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <form action="">
+      <input type="text" size="" id="c" />
+      <input type="button" id="a" value="Add" onclick="themphantu()" />
+      <input type="button" id="b" value="Display" onclick="hienthiphantu()" />
+    </form>
+    <div id="ketqua"></div>
+    <script>
+      let x = 0;
+      let array = Array();
+
+      function themphantu() {
+        array[x] = document.getElementById("c").value;
+        alert("Bạn đã thêm" + array[x] + "vào vị trí" + x);
+        x++;
+        document.getElementById("c").value = "";
+      }
+      function hienthiphantu() {
+        let d = "<hr>";
+        for (let i = 0; i < array.length; i++) {
+          d += "Element:" + i + "=" + array[i] + "<br/>";
+          document.getElementById("ketqua").innerHTML = d;
+        }
+      }
+    </script> -->
+    <!-- <script>
+      let x = new Array(-3, 5, 1, 3, 2, 10);
+      let first = 0;
+      let last = x.length - 1;
+      while (first < last) {
+        let b = x[first];
+        x[first] = x[last];
+        x[last] = b;
+        first++;
+        last--;
+      }
+      document.write(x);
+    </script> -->
+    <!-- <script>
+      let giatri = prompt("nhập giá tri:");
+      let mang = new Array(-3, 5, 1, 3, 2, 10);
+      for (let i = 0; i < mang.length; i++) {
+        if (giatri == mang[i]) {
+          alert("giatri" + mang[i] + "tìm thấy ở:" + i);
+        }
+      }
+    </script> -->
+    <script>
+      let numbers = [-3, 5, 1, 3, 2, 10];
+      let max = numbers[0];
+      let index = 0;
+      for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] > max) {
+          max = numbers[i];
+          index = i;
+        }
+      }
+      alert("max: " + max + " at position " + index);
+    </script>
+  </body>
+</html>
