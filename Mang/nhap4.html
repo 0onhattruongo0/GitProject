@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function generateArray(size) {
+        let Arr = [];
+        for (let i = 0; i < size; i++) {
+          Arr[i] = Math.floor(Math.random() * 90 + 10);
+        }
+        return Arr;
+      }
+
+      function printArray(Arr) {
+        return Arr.join(",");
+      }
+      function sum(Arr) {
+        let sum = 0;
+        for (let i = 0; i < Arr.length; i++) {
+          sum += Arr[i];
+        }
+        return sum;
+      }
+      function totalodd(Arr) {
+        let count = 0;
+        for (let i = 0; i < Arr.length; i++) {
+          if (Arr[i] % 2 != 0) {
+            count += 1;
+          }
+        }
+        return count;
+      }
+      function totaleven(Arr) {
+        let count1 = 0;
+        for (let i = 0; i < Arr.length; i++) {
+          if (Arr[i] % 2 == 0) {
+            count1 += 1;
+          }
+        }
+        return count1;
+      }
+      function inputsize() {
+        let size = 0;
+        do {
+          size = +prompt("inputsize:");
+        } while (!Number.isInteger(size));
+        return size;
+      }
+      function main() {
+        let size = inputsize();
+        let Arr = generateArray(size);
+        document.write(printArray(Arr) + "<br>");
+
+        document.write(sum(Arr) + "<br>");
+        document.write(`${totalodd(Arr)} <br>`);
+        document.write(`${totaleven(Arr)} <br>`);
+      }
+      main();
+    </script>
+  </body>
+</html>

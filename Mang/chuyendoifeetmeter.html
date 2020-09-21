@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <h1>Chuyển đổi feet meter</h1>
+      feet<input
+        type="number"
+        oninput="chuyendoi(this.value)"
+        onchange="chuyendoi(this.value)"
+      />
+      <p>meter: <span id="result"> </span></p>
+    </form>
+    <script>
+      function chuyendoi(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("result").innerHTML = 3.279 * valNum;
+      }
+    </script>
+  </body>
+</html>

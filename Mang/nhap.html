@@ -6,21 +6,37 @@
     <title>Document</title>
   </head>
   <body>
+    <p id="cocaro"></p>
     <script>
-      let x = 0;
-      let array = Array();
-      function themphantu() {
-        array[x] = document.getElementById("c").value;
-        alert("Element: " + array[x] + " Added at index " + x);
-        x++;
-        document.getElementById("c").value = "";
+      let a = document.getElementById("cocaro");
+      let board = Array();
+      let data = "";
+      for (let i = 0; i < 5; i++) {
+        board[i] = Array(0, 0, 0, 0, 0);
       }
-      function hienthiphantu() {
-        let e = "<hr />";
-        for (let i = 0; i < array.length; i++) {
-          e += "Element " + i + " = " + array[i] + "<br/>";
+      for (let i = 0; i < 5; i++) {
+        data += "<br />";
+        for (let j = 0; j < 5; j++) {
+          data += board[i][j] + "&nbsp;&nbsp;";
         }
-        document.getElementById("ketqua").innerHTML = e;
+      }
+      data +=
+        "<br/><input type='button' onclick='Changevalue()' value='Changevalue'/>";
+      a.innerHTML = data;
+      function Changevalue() {
+        var x = prompt("Nhập X");
+        var y = prompt("Nhập Y");
+        data = "";
+        board[x][y] = "X";
+        for (let i = 0; i < 5; i++) {
+          data += "<br/>";
+          for (let j = 0; j < 5; j++) {
+            data += board[i][j] + "&nbsp;&nbsp;";
+          }
+        }
+        data +=
+          "<br/><input type='button' onclick='Changevalue()' value='Changevalue'/>";
+        a.innerHTML = "<hr/>" + data;
       }
     </script>
   </body>

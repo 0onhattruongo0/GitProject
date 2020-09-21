@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   function a() {
+      //     alert("Xin chào.");
+      //   }
+      //   a();
+      //   let a = +prompt("nhập số:");
+      //   //   let result = ab(a);
+      //   function ab(a) {
+      //     let b = a + 1;
+      //     return b;
+      //   }
+      //   //   document.write(result);
+      //   document.write(ab(a));
+      // let a1 = +prompt("nhập a1:");
+      // let a2 = +prompt("nhập a2:");
+      // let result = a(a1, a2);
+
+      // function a(number1, number2) {
+      //   if (number1 > number2) {
+      //     alert(number1 + "là lớn hơn" + number2);
+      //   } else {
+      //     alert(number1 + number2);
+      //   }
+      // }
+      // function addNumbers() {
+      //   firstNum = 4;
+      //   secondNum = 8;
+      //   result = firstNum + secondNum;
+      //   return result;
+      // }
+      // result = 0;
+      // alert(result);
+      // result = addNumbers();
+      // alert(result);
+
+      // let input = prompt("input:");
+      // let arr1 = new Array(
+      //   "Polaris",
+      //   "Aldebaran",
+      //   "Deneb",
+      //   "Vega",
+      //   "Altair",
+      //   "Dubhe",
+      //   "Regulus"
+      // );
+      // let arr2 = new Array(
+      //   "Ursa Minor",
+      //   "Tarurus",
+      //   "Cygnus",
+      //   "Lyra",
+      //   "Aquila",
+      //   "Ursa Major",
+      //   "Leo"
+      // );
+      // let c;
+      // let b;
+      // let d = star1(input);
+      // function star1(input) {
+      //   for (let i = 0; i < arr1.length; i++) {
+      //     if (input == arr1[i]) {
+      //       b = i;
+
+      //       c = arr2[b];
+      //       break;
+      //     } else {
+      //       c = "ko tìm thấy ngôi sao nào.";
+      //     }
+      //   }
+      //   alert(c);
+      // }
+      // let ab = prompt("input:");
+      // function isPalindrome(input) {
+      //   let ketqua = "doi xung";
+      //   let arr = ab.split("");
+      //   let arr2 = [];
+
+      //   for (let i = arr.length - 1; i >= 0; i--) {
+      //     arr2.push(arr[i]);
+      //   }
+      //   for (let i = 0; i < arr.length; i++) {
+      //     if (arr[i] != arr2[i]) {
+      //       ketqua = "khong doi xung";
+      //       break;
+      //     }
+      //   }
+      //   return ketqua;
+      // }
+      // document.write(isPalindrome(ab));
+
+      function isPalindrome(String) {
+        if (String.length <= 1) {
+          return true;
+        } else {
+          if (String[0] == String[String.length - 1]) {
+            return isPalindrome(String.slice(1, String.length - 1));
+          } else return false;
+        }
+      }
+      let a = prompt("input:");
+      let b = isPalindrome(a);
+      if (b == true) {
+        document.write("Đối xứng.");
+      } else document.write("Ko đối xứng.");
+    </script>
+  </body>
+</html>

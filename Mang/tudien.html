@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Từ điển</h1>
+    <input type="text" id="nhaptu" />
+    <button onclick="tratu()">seach</button>
+    <div id="result"></div>
+
+    <script>
+      let TiengAnh = new Array("Hi", "go", "school");
+      let TiengViet = new Array("Xinchao", "đi", "trườnghọc");
+      let b;
+      let a;
+      let d;
+      function tratu() {
+        b = document.getElementById("nhaptu").value;
+
+        for (let i = 0; i < TiengAnh.length; i++) {
+          if (b == TiengAnh[i]) {
+            d = i;
+            a = TiengViet[d];
+            break;
+          } else {
+            a = "Không tim thay";
+          }
+        }
+
+        document.getElementById("result").innerHTML = a;
+      }
+    </script>
+  </body>
+</html>

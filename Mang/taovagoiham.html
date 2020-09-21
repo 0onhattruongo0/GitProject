@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <script>
+      function processconfirm(answer) {
+        let result;
+        if (answer) {
+          result = "Excellent.We'll play a nice game of chess.";
+        } else {
+          result = "Maybe later then.";
+        }
+        return result;
+      }
+      let confirmAnswer = confirm("Shall We play a game?");
+      let theAnswer = processconfirm(confirmAnswer);
+      alert(theAnswer);
+    </script> -->
+    <!-- <form>
+      <h1>Temperature Converter</h1>
+      <p>
+        Type a value in the Fahrenheit field to convert the value to Celcius:
+      </p>
+      Fahrenheit<input
+        type="number"
+        id="inputFahrenheit"
+        placeholder="inputFahrenheit"
+        oninput="temperatureConverter(this.value)"
+        onchange="temperatureConverter(this.value)"
+      />
+      <p>Celcius: <span id="outputCelcius"> </span></p>
+    </form>
+    <script>
+      function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputCelcius").innerHTML =
+          (valNum - 32) / 1.8;
+      }
+    </script> -->
+    <script>
+      //   function minArray(arr) {
+      //     let min = arr[0];
+      //     for (var i = 1; i < arr.length; i++) {
+      //       if (arr[i] < min) {
+      //         min = arr[i];
+      //       }
+      //     }
+      //     return min;
+      //   }
+      //   let arr1 = [3, 5, 1, 8, -3, 7, 8];
+      //   let min = minArray(arr1);
+      //   alert(min);
+      function minArray(arr) {
+        if (arr.length == 0) return -1;
+        let min = arr[0];
+
+        for (let i = 1; i < arr.length; i++) {
+          if (arr[i] < min) {
+            min = arr[i];
+          }
+        }
+        return min;
+      }
+    </script>
+  </body>
+</html>

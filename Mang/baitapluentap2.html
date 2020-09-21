@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let a = prompt("input:");
+      //   let tinh = sqr(a);
+      //   document.write(tinh);
+      //   function sqr(x) {
+      //     let result;
+      //     result = x * x;
+      //     return result;
+      //   }
+
+      // function DT(r) {
+      //   return r * r * 3.14;
+      // }
+      // function CV(r) {
+      //   return 2 * r * 3.14;
+      // }
+      // let b = prompt("input:");
+      // let DT1 = DT(b);
+      // let CV1 = CV(b);
+      // document.write(DT1);
+      // document.write("<br/>");
+      // document.write(CV1);
+
+      //   function tinhgiaithua(x) {
+      //     let giaithua = 1;
+      //     for (i = 1; i <= x; i++) {
+      //       giaithua *= i;
+      //     }
+      //     return giaithua;
+      //   }
+      //   let input = prompt("input:");
+      //   let tinh = tinhgiaithua(input);
+      //   document.write(tinh);
+
+      // function min(x, y, z) {
+      //   let min1;
+      //   min1 = x < y ? (x < z ? x : z) : y < z ? y : z;
+      //   return min1;
+      // }
+      // let a = prompt("input x:");
+      // let b = prompt("input y:");
+      // let c = prompt("input z:");
+      // let d = min(a, b, c);
+      // document.write(d);
+      // let a = parseInt(prompt("input:"));
+
+      // if (Number.isInteger(a) == true) {
+      //   alert("Đó là số.");
+      // } else {
+      //   alert("Đó ko phải số.");
+      // }
+      // let a = prompt("input x:");
+      // let b = prompt("input y:");
+      // let c;
+      // let d = change(a, b);
+      // function change(x, y) {
+      //   c = x;
+      //   x = y;
+      //   y = c;
+      //   document.write("x:" + x);
+      //   document.write("y:" + y);
+      // }
+      let arr = new Array();
+      let length = prompt("nhập chiều dài mảng:");
+
+      for (let i = 0; i < length; i++) {
+        arr[i] = prompt("input:");
+      }
+      let x = prompt("nhập ký tự:");
+      function kiemtra(a) {
+        let n = 0;
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i] == a) {
+            n++;
+          }
+        }
+        return n;
+      }
+      let ab = kiemtra(x);
+      document.write("Số lần xuất hiện:" + ab);
+      if (ab > 0) {
+        alert("Có.");
+      } else alert("-1");
+    </script>
+  </body>
+</html>
